@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prestige Golden Grove | Luxury Apartments in Tellapur, Hyderabad</title>
+
+<style>
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#333;
+  background:#ffffff;
+  overflow-x: hidden;
+}
+
+/* TOP BAR - MOBILE FRIENDLY */
+.top-bar{
+  background:linear-gradient(135deg, #0c2461 0%, #1e3799 100%);
+  color:white;
+  padding:10px 0;
+  position:relative;
+}
+
+.top-bar-container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 15px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+.enquiry-form-top{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.enquiry-form-top input{
+  padding:10px 15px;
+  border:none;
+  border-radius:6px;
+  font-size:14px;
+  width:160px;
+  background:rgba(255,255,255,0.95);
+}
+
+.enquiry-form-top input:focus{
+  outline:none;
+  box-shadow:0 0 0 3px #FFD93D;
+}
+
+.enquiry-form-top button{
+  background:#FFD93D;
+  color:#0c2461;
+  border:none;
+  padding:10px 20px;
+  border-radius:6px;
+  font-weight:bold;
+  font-size:14px;
+  cursor:pointer;
+  transition:all 0.3s;
+  white-space:nowrap;
+}
+
+.enquiry-form-top button:hover{
+  background:#ffca27;
+  transform:translateY(-2px);
+}
+
+/* HEADER - OPTIMIZED FOR MOBILE */
+.header{
+  position:sticky;
+  top:0;
+  background:white;
+  box-shadow:0 4px 20px rgba(0,0,0,0.1);
+  z-index:1000;
+}
+
+.header-container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:12px 15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  height:60px;
+  cursor:pointer;
+  transition:transform 0.3s;
+}
+
+.logo:hover{
+  transform:scale(1.05);
+}
+
+/* MOBILE MENU BUTTON */
+.mobile-menu-btn{
+  display:none;
+  flex-direction:column;
+  gap:4px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:5px;
+}
+
+.mobile-menu-btn span{
+  width:25px;
+  height:3px;
+  background:#0c2461;
+  border-radius:2px;
+  transition:0.3s;
+}
+
+/* NAVIGATION */
+.nav-menu{
+  display:flex;
+  gap:4px;
+  flex-wrap:wrap;
+}
+
+.nav-item{
+  padding:8px 12px;
+  text-decoration:none;
+  color:#0c2461;
+  font-weight:600;
+  font-size:14px;
+  border-radius:6px;
+  transition:all 0.3s;
+  white-space:nowrap;
+}
+
+.nav-item:hover{
+  background:rgba(12,36,97,0.05);
+  color:#1e3799;
+}
+
+.nav-item.active{
+  background:linear-gradient(135deg, #0c2461 0%, #1e3799 100%);
+  color:white;
+}
+
+.header-cta{
+  background:linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  color:white;
+  padding:10px 20px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:14px;
+  box-shadow:0 4px 15px rgba(255,107,107,0.3);
+  transition:all 0.3s;
+  white-space:nowrap;
+}
+
+.header-cta:hover{
+  transform:translateY(-3px);
+  box-shadow:0 6px 20px rgba(255,107,107,0.4);
+}
+
+/* TWO COLUMN HOME PAGE - OPTIMIZED */
+.home-section{
+  display:grid;
+  grid-template-columns:70% 30%;
+  min-height:600px;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0;
+  position:relative;
+  overflow:hidden;
+  border-radius:0 0 20px 20px;
+}
+
+.home-left{
+  background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/g4.png.png') center/cover no-repeat;
+  padding:50px 35px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.home-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0,0,0,0.7), transparent);
+}
+
+.home-left h1{
+  font-size:36px;
+  color:#fff;
+  margin-bottom:15px;
+  text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.home-left p{
+  font-size:18px;
+  color:#f0f0f0;
+  line-height:1.6;
+  margin-bottom:25px;
+  text-shadow:1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.project-highlight{
+  background:rgba(255,255,255,0.15);
+  padding:20px;
+  border-radius:15px;
+  border-left:5px solid #FFD93D;
+  margin-top:25px;
+  backdrop-filter: blur(5px);
+}
+
+.project-highlight h3{
+  color:#FFD93D;
+  margin-bottom:12px;
+  font-size:18px;
+}
+
+.project-highlight p{
+  line-height:1.6;
+  color:#f0f0f0;
+  font-size:15px;
+  margin:0;
+}
+
+.home-right{
+  background:white;
+  padding:35px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  box-shadow:-5px 0 20px rgba(0,0,0,0.1);
+}
+
+.eoi-form{
+  text-align:center;
+}
+
+.eoi-form h2{
+  color:#0c2461;
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+.eoi-form .highlight{
+  color:#FF6B6B;
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.eoi-form input{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border:2px solid #e0e0e0;
+  border-radius:8px;
+  font-size:15px;
+  transition:border-color 0.3s;
+}
+
+.eoi-form input:focus{
+  outline:none;
+  border-color:#1e3799;
+}
+
+.eoi-form button{
+  width:100%;
+  background:linear-gradient(135deg, #0c2461 0%, #1e3799 100%);
+  color:white;
+  padding:15px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:transform 0.3s;
+  margin-top:8px;
+}
+
+.eoi-form button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(12,36,97,0.3);
+}
+
+/* CLUB HOUSE SECTION */
+.clubhouse-section{
+  background:linear-gradient(135deg, #0c2461 0%, #1e3799 100%);
+  padding:60px 15px;
+  color:white;
+}
+
+.clubhouse-container{
+  max-width:1000px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.clubhouse-title{
+  font-size:32px;
+  margin-bottom:30px;
+  color:#FFD93D;
+}
+
+.clubhouse-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.clubhouse-feature{
+  background:rgba(255,255,255,0.1);
+  padding:25px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+.clubhouse-feature h3{
+  color:#FFD93D;
+  font-size:20px;
+  margin-bottom:15px;
+}
+
+.clubhouse-feature ul{
+  list-style:none;
+  text-align:left;
+}
+
+.clubhouse-feature li{
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:14px;
+}
+
+.clubhouse-feature li:before{
+  content:"✓";
+  color:#FFD93D;
+  font-weight:bold;
+}
+
+/* CONNECTIVITY SECTION */
+.connectivity-section{
+  padding:60px 15px;
+  background:white;
+}
+
+.section-title{
+  text-align:center;
+  color:#0c2461;
+  font-size:28px;
+  margin-bottom:40px;
+}
+
+.connectivity-container{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.map-container{
+  width:100%;
+  height:500px;
+  border-radius:15px;
+  overflow:hidden;
+  margin-bottom:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  border:1px solid #e0e0e0;
+}
+
+.map-container img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.connectivity-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+.connectivity-card{
+  background:linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+  border-left:5px solid #0c2461;
+}
+
+.connectivity-card h3{
+  color:#0c2461;
+  margin-bottom:15px;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.connectivity-list{
+  list-style:none;
+}
+
+.connectivity-list li{
+  padding:10px 0;
+  border-bottom:1px solid #eee;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:14px;
+}
+
+.distance{
+  background:#0c2461;
+  color:white;
+  padding:4px 10px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+/* FUTURE DEVELOPMENT */
+.future-dev-section{
+  background:linear-gradient(135deg, #f0f5ff 0%, #e6f0ff 100%);
+  padding:60px 15px;
+}
+
+.future-grid{
+  max-width:1000px;
+  margin:30px auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.future-card{
+  background:white;
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:transform 0.3s;
+}
+
+.future-card:hover{
+  transform:translateY(-8px);
+}
+
+.future-icon{
+  font-size:40px;
+  margin-bottom:15px;
+  color:#0c2461;
+}
+
+.future-card h3{
+  color:#0c2461;
+  margin-bottom:12px;
+  font-size:20px;
+}
+
+.future-card p{
+  color:#666;
+  line-height:1.6;
+  font-size:14px;
+}
+
+/* PRICE SECTION WITH ANIMATION */
+.price-section{
+  background:white;
+  padding:60px 15px;
+  overflow:hidden;
+}
+
+.price-container{
+  max-width:1000px;
+  margin:0 auto;
+  background:linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius:15px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  position:relative;
+}
+
+.price-highlight{
+  text-align:center;
+  font-size:24px;
+  color:#FF6B6B;
+  margin-bottom:30px;
+  font-weight:bold;
+}
+
+.price-slider-container{
+  position:relative;
+  overflow:hidden;
+  margin-bottom:30px;
+}
+
+.price-slider{
+  display:flex;
+  gap:20px;
+  transition:transform 0.5s ease;
+  padding:10px 0;
+}
+
+.price-card{
+  min-width:calc(100% - 40px);
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  text-align:center;
+  position:relative;
+  transition:transform 0.3s;
+  background:white;
+  border:2px solid #e0e0e0;
+}
+
+.price-card:nth-child(1){
+  border-color:#2196f3;
+  background:linear-gradient(135deg, #e3f2fd 0%, #f5fbff 100%);
+}
+
+.price-card:nth-child(2){
+  border-color:#4caf50;
+  background:linear-gradient(135deg, #e8f5e9 0%, #f5fff5 100%);
+}
+
+.price-card:nth-child(3){
+  border-color:#ff9800;
+  background:linear-gradient(135deg, #fff3e0 0%, #fffaf5 100%);
+}
+
+.price-card:nth-child(4){
+  border-color:#9c27b0;
+  background:linear-gradient(135deg, #f3e5f5 0%, #faf5ff 100%);
+}
+
+.price-card:nth-child(5){
+  border-color:#f44336;
+  background:linear-gradient(135deg, #ffebee 0%, #fff5f5 100%);
+}
+
+.price-card.featured:before{
+  content:"🔥 HOT";
+  position:absolute;
+  top:10px;
+  right:-25px;
+  background:#FF6B6B;
+  color:white;
+  padding:4px 25px;
+  transform:rotate(45deg);
+  font-size:11px;
+  font-weight:bold;
+}
+
+.price-card h3{
+  color:#0c2461;
+  margin-bottom:12px;
+  font-size:18px;
+}
+
+.price-amount{
+  font-size:24px;
+  font-weight:bold;
+  color:#FF6B6B;
+  margin:12px 0;
+}
+
+.price-area{
+  color:#666;
+  font-size:13px;
+  margin-bottom:12px;
+}
+
+.price-features{
+  list-style:none;
+  text-align:left;
+  margin-top:12px;
+  font-size:13px;
+}
+
+.price-features li{
+  padding:6px 0;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.price-features li:before{
+  content:"✓";
+  color:#28a745;
+  font-weight:bold;
+}
+
+.slider-nav{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:20px;
+}
+
+.slider-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#ddd;
+  border:none;
+  cursor:pointer;
+  transition:background 0.3s;
+}
+
+.slider-dot.active{
+  background:#0c2461;
+}
+
+.slider-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:#0c2461;
+  color:white;
+  border:none;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:20px;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background 0.3s;
+}
+
+.slider-btn:hover{
+  background:#1e3799;
+}
+
+.prev-btn{
+  left:10px;
+}
+
+.next-btn{
+  right:10px;
+}
+
+/* SLIDER */
+.slider{
+  position:relative;
+  height:500px;
+  overflow:hidden;
+}
+.slider img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:none;
+  animation:fadeIn 1s ease-in;
+}
+.slider img.active{display:block;}
+@keyframes fadeIn{from{opacity:0.5;} to{opacity:1;}}
+
+.image-titles{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background:linear-gradient(transparent, rgba(0,0,0,0.8));
+  color:white;
+  padding:20px;
+}
+
+.image-titles h3{
+  font-size:22px;
+  margin-bottom:8px;
+  color:#FFD93D;
+}
+
+.image-titles p{
+  font-size:16px;
+  opacity:0.9;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+  padding:40px 15px;
+  background:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.gallery img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+  transition:transform 0.4s, box-shadow 0.4s;
+  cursor:pointer;
+}
+.gallery img:hover{
+  transform:translateY(-8px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* CONTACT SECTION */
+.contact-section{
+  background:linear-gradient(135deg, #0c2461 0%, #1e3799 100%);
+  padding:60px 15px;
+  color:white;
+}
+
+.contact-container{
+  max-width:1000px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  align-items:center;
+}
+
+.contact-info h2{
+  color:#FFD93D;
+  font-size:28px;
+  margin-bottom:25px;
+}
+
+.contact-details{
+  list-style:none;
+  margin-top:25px;
+}
+
+.contact-details li{
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:16px;
+}
+
+.contact-details li:before{
+  content:"📍";
+  color:#FFD93D;
+  font-size:18px;
+}
+
+.contact-form{
+  background:rgba(255,255,255,0.1);
+  padding:30px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+.contact-form h3{
+  color:#FFD93D;
+  font-size:22px;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.contact-form input{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border:2px solid rgba(255,255,255,0.3);
+  border-radius:8px;
+  font-size:15px;
+  background:rgba(255,255,255,0.9);
+  transition:border-color 0.3s;
+}
+
+.contact-form input:focus{
+  outline:none;
+  border-color:#FFD93D;
+}
+
+.contact-form button{
+  width:100%;
+  background:linear-gradient(135deg, #FFD93D 0%, #FF6B6B 100%);
+  color:#0c2461;
+  padding:16px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:transform 0.3s;
+}
+
+.contact-form button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(255,215,0,0.3);
+}
+
+/* POPUP */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+  animation:fadeInOverlay 0.5s ease;
+}
+@keyframes fadeInOverlay{from{opacity:0;} to{opacity:1;}}
+
+.popup{
+  background:white;
+  color:#333;
+  width:95%;
+  max-width:500px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+  animation:popupSlide 0.6s ease-out;
+}
+@keyframes popupSlide{
+  from{transform:translateY(-100px) scale(0.9); opacity:0;}
+  to{transform:translateY(0) scale(1); opacity:1;}
+}
+
+.popup-content{
+  padding:40px;
+  text-align:center;
+  background:linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.popup-logo{
+  height:60px;
+  margin-bottom:25px;
+}
+
+.popup h2{
+  color:#0c2461;
+  font-size:26px;
+  margin-bottom:15px;
+}
+
+.popup-subtitle{
+  font-size:16px;
+  color:#666;
+  margin-bottom:30px;
+}
+
+.popup-form{
+  margin-top:25px;
+}
+
+.popup-form input{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border:2px solid #e0e0e0;
+  border-radius:8px;
+  font-size:15px;
+  transition:border-color 0.3s;
+}
+
+.popup-form input:focus{
+  outline:none;
+  border-color:#1e3799;
+}
+
+.popup-form button{
+  width:100%;
+  background:linear-gradient(135deg, #0c2461 0%, #1e3799 100%);
+  color:white;
+  padding:16px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:transform 0.3s;
+  margin-top:8px;
+}
+
+.popup-form button:hover{
+  transform:translateY(-3px);
+}
+
+.close{
+  position:absolute;
+  top:20px;
+  right:20px;
+  cursor:pointer;
+  font-size:28px;
+  color:rgba(0,0,0,0.6);
+  font-weight:300;
+  transition:color 0.3s;
+  z-index:2;
+  width:35px;
+  height:35px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(0,0,0,0.1);
+}
+.close:hover{
+  color:#000;
+  background:rgba(0,0,0,0.15);
+}
+
+/* FLOATING BUTTONS */
+.call-axis, .wa-axis{
+  position:fixed;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  z-index:999;
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.call-axis:hover, .wa-axis:hover{
+  transform:scale(1.1);
+  box-shadow:0 12px 25px rgba(0,0,0,0.4);
+}
+.call-axis{
+  right:20px;
+  bottom:120px;
+  background:linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  animation:pulse 2s infinite;
+}
+.wa-axis{
+  right:20px;
+  bottom:50px;
+  background:linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  animation:pulse 2s infinite 0.5s;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(13,110,253,0.7);}
+  70%{box-shadow:0 0 0 12px rgba(13,110,253,0);}
+  100%{box-shadow:0 0 0 0 rgba(13,110,253,0);}
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px){
+  .home-section{
+    grid-template-columns:1fr;
+    border-radius:0;
+    min-height:auto;
+  }
+  .home-left{
+    clip-path:none;
+    padding:40px 20px;
+    min-height:400px;
+  }
+  .home-left::after{
+    display:none;
+  }
+  .home-right{
+    padding:40px 20px;
+  }
+  .nav-menu{
+    display:none;
+  }
+  .mobile-menu-btn{
+    display:flex;
+  }
+  .header-cta{
+    display:none;
+  }
+  .enquiry-form-top input{
+    width:140px;
+  }
+  .slider-btn{
+    display:none;
+  }
+  .price-card{
+    min-width:calc(100% - 20px);
+  }
+}
+
+@media (max-width: 768px){
+  .home-left h1{font-size:28px;}
+  .home-left p{font-size:16px;}
+  .section-title{font-size:24px;}
+  .clubhouse-title{font-size:28px;}
+  .slider{height:350px;}
+  .image-titles h3{font-size:20px;}
+  .image-titles p{font-size:14px;}
+  .map-container{height:350px;}
+  .contact-container{grid-template-columns:1fr;}
+  .enquiry-form-top{
+    width:100%;
+    justify-content:center;
+  }
+  .enquiry-form-top input{
+    width:calc(50% - 5px);
+  }
+  .enquiry-form-top button{
+    width:100%;
+  }
+  .call-axis, .wa-axis{
+    width:50px;
+    height:50px;
+    font-size:22px;
+    right:15px;
+    bottom:100px;
+  }
+  .wa-axis{
+    bottom:40px;
+  }
+}
+
+@media (max-width: 480px){
+  .header-container{
+    padding:10px;
+  }
+  .logo{
+    height:50px;
+  }
+  .home-left, .home-right{
+    padding:30px 15px;
+  }
+  .eoi-form h2{font-size:22px;}
+  .eoi-form .highlight{font-size:18px;}
+  .clubhouse-grid, .future-grid, .connectivity-grid{
+    grid-template-columns:1fr;
+  }
+  .price-container{
+    padding:20px;
+  }
+  .gallery{
+    grid-template-columns:1fr;
+    padding:30px 15px;
+  }
+  .gallery img{
+    height:180px;
+  }
+  .contact-form{
+    padding:25px 20px;
+  }
+  .popup-content{
+    padding:30px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-container">
+    <div class="enquiry-form-top">
+      <input type="text" placeholder="Your Name" id="topName">
+      <input type="tel" placeholder="Mobile Number" id="topPhone">
+      <button onclick="submitTopEnquiry()">GET CALL BACK</button>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-container">
+    <img src="images/logo.png" class="logo" alt="Prestige Golden Grove Logo">
+    
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="nav-menu" id="navMenu">
+      <a href="#clubhouse" class="nav-item">Club House</a>
+      <a href="#connectivity" class="nav-item">Connectivity</a>
+      <a href="#future" class="nav-item">Future Development</a>
+      <a href="#price" class="nav-item active">Price & Plans</a>
+      <a href="#gallery" class="nav-item">Gallery</a>
+      <a href="#contact" class="nav-item">Contact Us</a>
+    </nav>
+    
+    <a href="tel:+918332956001" class="header-cta">📞 Call: +91 8332956001</a>
+  </div>
+</header>
+
+<!-- TWO COLUMN HOME PAGE -->
+<section class="home-section" id="home">
+  <div class="home-left">
+    <h1>Prestige Golden Grove</h1>
+    <p>Luxury Apartments in Tellapur, Hyderabad's Most Promising Residential Hub</p>
+    
+    <div class="project-highlight">
+      <h3>📍 About Prestige Kollur-Tellapur</h3>
+      <p>Prestige Golden Grove is a futuristic luxury residential project in Tellapur, West Hyderabad. Offering 2, 3, 3.5 & 4 BHK modern apartments with sweeping city views, green spaces, and contemporary architecture. Located near Financial District and Outer Ring Road (ORR) with seamless connectivity to Gachibowli, HITEC City, and Kokapet.</p>
+    </div>
+  </div>
+  
+  <div class="home-right">
+    <div class="eoi-form">
+      <h2>🚀 PRE-LAUNCH OFFER</h2>
+      <div class="highlight">Submit EOI Now!</div>
+      <p style="color:#666; margin-bottom:20px;">Be among the first to get exclusive pre-launch benefits</p>
+      
+      <input type="text" placeholder="Your Full Name" id="homeName">
+      <input type="tel" placeholder="Mobile Number" id="homePhone">
+      <input type="email" placeholder="Email Address (Optional)" id="homeEmail">
+      
+      <button onclick="submitEOI()">SUBMIT EXPRESSION OF INTEREST</button>
+      
+      <p style="font-size:14px; color:#666; margin-top:20px;">📍 Contact: <strong>+91 8332956001</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- POPUP -->
+<div class="overlay" id="popup">
+  <div class="popup">
+    <span class="close" onclick="closePopup()">×</span>
+    <div class="popup-content">
+      <img src="images/logo.png" class="popup-logo" alt="Prestige Logo">
+      <h2>Exclusive Pre-Launch Offer</h2>
+      <p class="popup-subtitle">Submit EOI for Priority Access & Best Prices</p>
+      
+      <div class="popup-form">
+        <input type="text" placeholder="Your Full Name" id="popupName">
+        <input type="tel" placeholder="Mobile Number" id="popupPhone">
+        <input type="email" placeholder="Email Address (Optional)" id="popupEmail">
+        <button onclick="submitPopupForm()">SUBMIT EOI NOW</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CLUB HOUSE SECTION -->
+<section class="clubhouse-section" id="clubhouse">
+  <div class="clubhouse-container">
+    <h2 class="clubhouse-title">🏆 CLUB HOUSE</h2>
+    <p style="font-size:18px; margin-bottom:25px; opacity:0.9;">Experience Luxury Living with Premium Amenities</p>
+    
+    <div class="clubhouse-grid">
+      <div class="clubhouse-feature">
+        <h3>🏊 Swimming & Fitness</h3>
+        <ul>
+          <li>Temperature Controlled Swimming Pool</li>
+          <li>State-of-the-art Gymnasium</li>
+          <li>Yoga & Meditation Hall</li>
+          <li>Steam & Sauna Facilities</li>
+          <li>Indoor Games Room</li>
+        </ul>
+      </div>
+      
+      <div class="clubhouse-feature">
+        <h3>🎉 Entertainment Zone</h3>
+        <ul>
+          <li>Private Theater & Screening Room</li>
+          <li>Multi-purpose Party Hall</li>
+          <li>Kids Play Area with Supervision</li>
+          <li>Indoor Sports Complex</li>
+          <li>Library & Business Center</li>
+        </ul>
+      </div>
+      
+      <div class="clubhouse-feature">
+        <h3>🌳 Outdoor Facilities</h3>
+        <ul>
+          <li>Landscaped Gardens & Jogging Track</li>
+          <li>Children's Outdoor Play Area</li>
+          <li>Senior Citizen Sitting Area</li>
+          <li>Barbecue & Outdoor Dining</li>
+          <li>Pet Park & Walking Zone</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECTIVITY SECTION -->
+<section class="connectivity-section" id="connectivity">
+  <h2 class="section-title">📍 Connectivity Map</h2>
+  <div class="connectivity-container">
+    <div class="map-container">
+      <img src="images/map.png" alt="Connectivity Map">
+    </div>
+    
+    <div class="connectivity-grid">
+      <div class="connectivity-card">
+        <h3>📍 North</h3>
+        <ul class="connectivity-list">
+          <li>IT Hubs & Business Centers <span class="distance">14-20 km</span></li>
+          <li>Gachibowli <span class="distance">14 km | 25 mins</span></li>
+          <li>HITEC City <span class="distance">20 km | 35 mins</span></li>
+          <li>Madhapur <span class="distance">17 km | 30 mins</span></li>
+          <li>Financial District <span class="distance">15 km | 30 mins</span></li>
+          <li>Raidurg Metro Station <span class="distance">18 km | 35 mins</span></li>
+        </ul>
+      </div>
+      
+      <div class="connectivity-card">
+        <h3>📍 West</h3>
+        <ul class="connectivity-list">
+          <li>Outer Ring Road <span class="distance">3 km | 5 mins</span></li>
+          <li>Tellapur Road <span class="distance">2 km | 4 mins</span></li>
+          <li>Kokapet SEZ <span class="distance">12 km | 25 mins</span></li>
+          <li>Hyderabad Airport <span class="distance">35 km | 50 mins</span></li>
+          <li>Lingampally Station <span class="distance">15 km | 25 mins</span></li>
+        </ul>
+      </div>
+      
+      <div class="connectivity-card">
+        <h3>📍 South</h3>
+        <ul class="connectivity-list">
+          <li>Shopping & Entertainment <span class="distance">15-18 km</span></li>
+          <li>Inorbit Mall <span class="distance">18 km | 30 mins</span></li>
+          <li>Forum Sujana Mall <span class="distance">18 km | 30 mins</span></li>
+          <li>HITEX <span class="distance">14 km | 25 mins</span></li>
+          <li>Shilparamam <span class="distance">15 km | 25 mins</span></li>
+          <li>PVR Cinemas <span class="distance">13 km | 25 mins</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUTURE DEVELOPMENT -->
+<section class="future-dev-section" id="future">
+  <h2 class="section-title">🚀 Future Development & Growth</h2>
+  <div class="future-grid">
+    <div class="future-card">
+      <div class="future-icon">🏢</div>
+      <h3>Infrastructure Growth</h3>
+      <p>Tellapur emerging as Hyderabad's premium residential corridor with major infrastructure development</p>
+    </div>
+    
+    <div class="future-card">
+      <div class="future-icon">🚇</div>
+      <h3>Metro Connectivity</h3>
+      <p>Proposed Metro extension bringing Tellapur closer to city center and business districts</p>
+    </div>
+    
+    <div class="future-card">
+      <div class="future-icon">🏬</div>
+      <h3>Commercial Development</h3>
+      <p>New commercial complexes, shopping malls, and business parks planned in the vicinity</p>
+    </div>
+    
+    <div class="future-card">
+      <div class="future-icon">🎓</div>
+      <h3>Educational Hub</h3>
+      <p>Proximity to premier educational institutions and proposed new schools & colleges</p>
+    </div>
+    
+    <div class="future-card">
+      <div class="future-icon">🏥</div>
+      <h3>Healthcare Expansion</h3>
+      <p>Multi-specialty hospitals and healthcare centers coming up in the area</p>
+    </div>
+    
+    <div class="future-card">
+      <div class="future-icon">🌳</div>
+      <h3>Green Initiatives</h3>
+      <p>Development of green spaces, parks, and recreational zones in the master plan</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE SECTION WITH SLIDER -->
+<section class="price-section" id="price">
+  <h2 class="section-title">💰 Pricing & Configuration</h2>
+  <div class="price-container">
+    <div class="price-highlight">
+      🏠 Starting from ₹ 99 Lakhs* for 2BHK
+    </div>
+    
+    <div class="price-slider-container">
+      <button class="slider-btn prev-btn" onclick="prevSlide()">‹</button>
+      <div class="price-slider" id="priceSlider">
+        <div class="price-card">
+          <h3>2 BHK</h3>
+          <div class="price-amount">₹ 99 Lakhs*</div>
+          <div class="price-area">1100 - 1300 sq.ft</div>
+          <ul class="price-features">
+            <li>2 Bedrooms with Attached Baths</li>
+            <li>Modular Kitchen</li>
+            <li>Balcony</li>
+            <li>1 Car Parking</li>
+          </ul>
+        </div>
+        
+        <div class="price-card">
+          <h3>2.5 BHK</h3>
+          <div class="price-amount">₹ 1.3 Cr*</div>
+          <div class="price-area">1350 - 1500 sq.ft</div>
+          <ul class="price-features">
+            <li>2 Bedrooms + Study</li>
+            <li>Modular Kitchen</li>
+            <li>2 Balconies</li>
+            <li>1 Car Parking</li>
+          </ul>
+        </div>
+        
+        <div class="price-card">
+          <h3>3 BHK</h3>
+          <div class="price-amount">₹ 1.6 Cr*</div>
+          <div class="price-area">1550 - 1750 sq.ft</div>
+          <ul class="price-features">
+            <li>3 Bedrooms with Attached Baths</li>
+            <li>Modular Kitchen</li>
+            <li>2 Balconies</li>
+            <li>2 Car Parking</li>
+          </ul>
+        </div>
+        
+        <div class="price-card featured">
+          <h3>3.5 BHK</h3>
+          <div class="price-amount">₹ 2.2 Cr*</div>
+          <div class="price-area">2400 sq.ft</div>
+          <ul class="price-features">
+            <li>3 Bedrooms + Study</li>
+            <li>Premium Kitchen</li>
+            <li>3 Balconies</li>
+            <li>2 Car Parking</li>
+          </ul>
+        </div>
+        
+        <div class="price-card featured">
+          <h3>4 BHK</h3>
+          <div class="price-amount">₹ 3 Cr*</div>
+          <div class="price-area">3400 sq.ft</div>
+          <ul class="price-features">
+            <li>4 Bedrooms with Attached Baths</li>
+            <li>Premium Kitchen</li>
+            <li>Servant Room</li>
+            <li>3 Car Parking</li>
+          </ul>
+        </div>
+      </div>
+      <button class="slider-btn next-btn" onclick="nextSlide()">›</button>
+    </div>
+    
+    <div class="slider-nav">
+      <button class="slider-dot active" onclick="goToSlide(0)"></button>
+      <button class="slider-dot" onclick="goToSlide(1)"></button>
+      <button class="slider-dot" onclick="goToSlide(2)"></button>
+      <button class="slider-dot" onclick="goToSlide(3)"></button>
+      <button class="slider-dot" onclick="goToSlide(4)"></button>
+    </div>
+    
+    <p style="text-align:center; color:#666; margin-top:20px; font-size:14px;">
+      *Prices are indicative and subject to change. Contact for exact pricing, availability, and payment plans.
+    </p>
+  </div>
+</section>
+
+<!-- SLIDER -->
+<section class="slider">
+  <img src="images/g2.png.png" class="active" alt="Architectural Design">
+  <img src="images/g3.png.png" alt="Clubhouse View">
+  <img src="images/g4.png.png" alt="Swimming Pool">
+  <img src="images/g5.png.png" alt="Landscape Garden">
+  
+  <div class="image-titles">
+    <h3>Modern Architecture</h3>
+    <p>Contemporary design with premium finishes and attention to detail</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <img src="images/g6.png.png" alt="Apartment Interior">
+  <img src="images/g7.png.png" alt="Living Room">
+  <img src="images/g8.png.png" alt="Master Bedroom">
+  <img src="images/g9.png.png" alt="Kitchen Design">
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>📍 Contact Us</h2>
+      <p style="font-size:16px; line-height:1.6; opacity:0.9;">Get in touch with us for site visits, detailed information, and exclusive offers</p>
+      
+      <ul class="contact-details">
+        <li><strong>Address:</strong> Prestige Golden Grove, Tellapur, Hyderabad</li>
+        <li><strong>Phone:</strong> +91 8332956001</li>
+        <li><strong>WhatsApp:</strong> +91 8332956001</li>
+        <li><strong>Timing:</strong> 10:00 AM - 7:00 PM</li>
+        <li><strong>Location:</strong> <a href="https://maps.app.goo.gl/bMULzgbEdz93BWwd9" target="_blank" style="color:#FFD93D; text-decoration:none;">View on Google Maps →</a></li>
+      </ul>
+    </div>
+    
+    <div class="contact-form">
+      <h3>Quick Enquiry</h3>
+      <input type="text" placeholder="Your Name" id="contactName">
+      <input type="tel" placeholder="Mobile Number" id="contactPhone">
+      <input type="email" placeholder="Email (Optional)" id="contactEmail">
+      <button onclick="submitContact()">GET CALL BACK</button>
+    </div>
+  </div>
+</section>
+
+<a href="tel:+918332956001" class="call-axis" title="Call Now">📞</a>
+<a href="https://wa.me/918332956001" class="wa-axis" title="WhatsApp Now" target="_blank">💬</a>
+
+<script>
+// Auto-slider for images
+let slides = document.querySelectorAll(".slider img");
+let currentSlide = 0;
+const titles = [
+  {title: "Modern Architecture", desc: "Contemporary design with premium finishes and attention to detail"},
+  {title: "Premium Clubhouse", desc: "World-class amenities for luxurious living experience"},
+  {title: "Swimming Pool", desc: "Temperature controlled pool for year-round enjoyment"},
+  {title: "Landscaped Gardens", desc: "70% open spaces with lush green landscapes"}
+];
+
+function updateTitle() {
+  const titleDiv = document.querySelector(".image-titles");
+  titleDiv.innerHTML = `
+    <h3>${titles[currentSlide].title}</h3>
+    <p>${titles[currentSlide].desc}</p>
+  `;
+}
+
+setInterval(() => {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+  updateTitle();
+}, 4000);
+
+updateTitle();
+
+// Price slider functionality
+let currentPriceSlide = 0;
+const priceSlider = document.getElementById('priceSlider');
+const priceCards = document.querySelectorAll('.price-card');
+const priceDots = document.querySelectorAll('.slider-dot');
+const slideWidth = 100 + 20; // 100% + gap
+
+function updatePriceSlider() {
+  priceSlider.style.transform = `translateX(-${currentPriceSlide * slideWidth}%)`;
+  priceDots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentPriceSlide);
+  });
+}
+
+function nextSlide() {
+  currentPriceSlide = (currentPriceSlide + 1) % priceCards.length;
+  updatePriceSlider();
+}
+
+function prevSlide() {
+  currentPriceSlide = (currentPriceSlide - 1 + priceCards.length) % priceCards.length;
+  updatePriceSlider();
+}
+
+function goToSlide(index) {
+  currentPriceSlide = index;
+  updatePriceSlider();
+}
+
+// Auto slide price cards
+setInterval(nextSlide, 5000);
+
+// Mobile menu toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navMenu = document.getElementById('navMenu');
+
+mobileMenuBtn.addEventListener('click', () => {
+  navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+  mobileMenuBtn.classList.toggle('active');
+});
+
+// Close mobile menu on click outside
+document.addEventListener('click', (e) => {
+  if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+    navMenu.style.display = 'none';
+    mobileMenuBtn.classList.remove('active');
+  }
+});
+
+// Popup functions
+function closePopup(){
+  document.getElementById("popup").style.display = "none";
+}
+
+function showPopup(event){
+  if(event) event.preventDefault();
+  document.getElementById("popup").style.display = "flex";
+}
+
+// Form submission to Google Sheets
+function submitToGoogleForm(name, phone, email = "", config = "") {
+  const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSe955vFHOdJiU9oWxqyFtGEFYlV1GUB10vU3ylMLd4Qt1je5A/formResponse";
+  
+  const formData = new FormData();
+  formData.append('entry.66747704', name);
+  formData.append('entry.108335743', phone);
+  
+  fetch(formURL, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: formData
+  })
+  .then(() => {
+    console.log('Form submitted successfully');
+  })
+  .catch(error => {
+    console.error('Error submitting form:', error);
+  });
+  
+  return true;
+}
+
+function submitTopEnquiry(){
+  const name = document.getElementById("topName").value;
+  const phone = document.getElementById("topPhone").value;
+  
+  if(name && phone){
+    submitToGoogleForm(name, phone);
+    alert(`Thank you ${name}! We will contact you soon.`);
+    document.getElementById("topName").value = "";
+    document.getElementById("topPhone").value = "";
+  } else{
+    alert("Please enter both name and phone number.");
+  }
+}
+
+function submitEOI(){
+  const name = document.getElementById("homeName").value;
+  const phone = document.getElementById("homePhone").value;
+  const email = document.getElementById("homeEmail").value;
+  
+  if(name && phone){
+    submitToGoogleForm(name, phone, email, "Home Page EOI");
+    alert(`Thank you ${name}! We will contact you soon.`);
+    document.getElementById("homeName").value = "";
+    document.getElementById("homePhone").value = "";
+    document.getElementById("homeEmail").value = "";
+  } else{
+    alert("Please fill at least name and phone number.");
+  }
+}
+
+function submitPopupForm(){
+  const name = document.getElementById("popupName").value;
+  const phone = document.getElementById("popupPhone").value;
+  const email = document.getElementById("popupEmail").value;
+  
+  if(name && phone){
+    submitToGoogleForm(name, phone, email, "Popup EOI");
+    alert(`Thank you ${name}! We will contact you soon.`);
+    closePopup();
+    document.getElementById("popupName").value = "";
+    document.getElementById("popupPhone").value = "";
+    document.getElementById("popupEmail").value = "";
+  } else{
+    alert("Please fill at least name and phone number.");
+  }
+}
+
+function submitContact(){
+  const name = document.getElementById("contactName").value;
+  const phone = document.getElementById("contactPhone").value;
+  const email = document.getElementById("contactEmail").value;
+  
+  if(name && phone){
+    submitToGoogleForm(name, phone, email, "Contact Form");
+    alert(`Thank you ${name}! We will contact you soon.`);
+    document.getElementById("contactName").value = "";
+    document.getElementById("contactPhone").value = "";
+    document.getElementById("contactEmail").value = "";
+  } else{
+    alert("Please fill at least name and phone number.");
+  }
+}
+
+// Show popup after 45 seconds
+setTimeout(() => {
+  document.getElementById("popup").style.display = "flex";
+}, 45000);
+
+// Close popup when clicking outside
+document.getElementById("popup").addEventListener("click", function(e){
+  if(e.target === this){
+    closePopup();
+  }
+});
+
+// Add keyboard escape to close popup
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape"){
+    closePopup();
+  }
+});
+
+// Navigation active state
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+    this.classList.add('active');
+    
+    const targetId = this.getAttribute('href');
+    if(targetId && targetId !== '#') {
+      document.querySelector(targetId)?.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+    
+    // Close mobile menu after click
+    if(window.innerWidth <= 992){
+      navMenu.style.display = 'none';
+      mobileMenuBtn.classList.remove('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
