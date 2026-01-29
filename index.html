@@ -198,7 +198,7 @@ body{
 
 /* ========== HERO SECTION ========== */
 .hero-section {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/g14.png.png') center/cover no-repeat;
+  background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.9)), url('images/g4.png.png') center/cover no-repeat;
   padding: 80px 20px;
   display: flex;
   align-items: center;
@@ -217,50 +217,63 @@ body{
 }
 
 .hero-left {
-  color: white;
+  color: #333;
   text-align: left;
 }
 
 .hero-left h1 {
   font-size: 42px;
-  color: #FFD93D;
+  color: #0c2461;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .hero-subtitle {
-  color: #FFD93D;
+  color: #0c2461;
   font-size: 20px;
   margin-bottom: 30px;
   font-weight: 600;
 }
 
-.project-highlights {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin: 30px 0;
-}
-
-.highlight-item {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
+/* PROJECT HIGHLIGHTS BOX - UPDATED STYLE */
+.project-highlights-box {
+  border: 2px solid #ddd;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.2);
+  background-color: #f9f9f9;
+  margin: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.project-highlights-box h3 {
+  color: #0c2461;
+  font-size: 22px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
+.project-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.highlight-item {
+  text-align: center;
+  padding: 10px;
+}
+
 .highlight-value {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  color: #FFD93D;
+  color: #0c2461;
   margin-bottom: 5px;
 }
 
 .highlight-label {
   font-size: 14px;
-  color: rgba(255,255,255,0.9);
+  color: #666;
 }
 
 .price-tag {
@@ -316,6 +329,7 @@ body{
   padding: 35px;
   border-radius: 15px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border: 2px solid #0c2461;
 }
 
 .hero-right h3 {
@@ -367,9 +381,19 @@ body{
 
 /* ========== ABOUT SECTION ========== */
 .about-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(rgba(12, 36, 97, 0.05), rgba(12, 36, 97, 0.05)), url('images/g4.png.png') center/cover no-repeat;
   padding: 80px 20px;
   position: relative;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .section-title {
@@ -379,6 +403,7 @@ body{
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 15px;
+  z-index: 1;
 }
 
 .section-title:after {
@@ -400,6 +425,7 @@ body{
   margin-bottom: 25px;
   position: relative;
   padding-bottom: 15px;
+  z-index: 1;
 }
 
 .highlight-title:after {
@@ -426,6 +452,9 @@ body{
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+  border: 2px solid #0c2461;
 }
 
 .brochure-btn {
@@ -442,6 +471,8 @@ body{
   animation: brochureBlink 2s infinite;
   box-shadow: 0 8px 20px rgba(12,36,97,0.3);
   transition: all 0.3s;
+  position: relative;
+  z-index: 1;
 }
 
 .brochure-btn:hover {
@@ -699,22 +730,6 @@ body{
 
 .gallery-item:hover img {
   transform: scale(1.05);
-}
-
-.gallery-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.9));
-  color: white;
-  padding: 20px;
-  transform: translateY(100%);
-  transition: transform 0.3s;
-}
-
-.gallery-item:hover .gallery-caption {
-  transform: translateY(0);
 }
 
 /* ========== LOCATION SECTION ========== */
@@ -1105,10 +1120,6 @@ input.error {
     text-align: center;
   }
   
-  .project-highlights {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
   .sitevisit-container {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1172,7 +1183,7 @@ input.error {
     gap: 20px;
   }
   
-  .project-highlights {
+  .project-highlights-grid {
     grid-template-columns: 1fr;
     gap: 15px;
   }
@@ -1249,6 +1260,7 @@ input.error {
   
   .gallery-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
   
   .gallery-item {
@@ -1279,14 +1291,12 @@ input.error {
 
 /* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
-  .gallery-caption {
-    transform: translateY(0);
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  .gallery-item:hover {
+    transform: none;
   }
   
   .price-card:hover,
-  .amenity-card:hover,
-  .gallery-item:hover {
+  .amenity-card:hover {
     transform: none;
   }
   
@@ -1376,30 +1386,43 @@ input, button, textarea, select {
 <section class="hero-section" id="home">
   <div class="hero-container">
     <div class="hero-left">
-      <h1>Prestige Golden Grove</h1>
-      <p class="hero-subtitle">By Prestige Group | Luxury Apartments in Tellapur</p>
+      <h1>PRESTIGE GOLDEN GROVE</h1>
+      <p class="hero-subtitle">At Kollur / Tellapur, Hyderabad | By Prestige Group</p>
       
-      <div class="project-highlights">
-        <div class="highlight-item">
-          <div class="highlight-value">28.7 Acres</div>
-          <div class="highlight-label">Land Parcel</div>
+      <!-- UPDATED PROJECT HIGHLIGHTS BOX -->
+      <div class="project-highlights-box">
+        <h3>Project Highlights</h3>
+        <div class="project-highlights-grid">
+          <div class="highlight-item">
+            <div class="highlight-value">28.7 Acres</div>
+            <div class="highlight-label">Land Parcel</div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-value">10</div>
+            <div class="highlight-label">No. of Towers</div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-value">5000</div>
+            <div class="highlight-label">Total Units</div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-value">G+52 Floors</div>
+            <div class="highlight-label">Structure</div>
+          </div>
         </div>
-        <div class="highlight-item">
-          <div class="highlight-value">15 Towers</div>
-          <div class="highlight-label">No. of Towers</div>
-        </div>
-        <div class="highlight-item">
-          <div class="highlight-value">G+19 Floors</div>
-          <div class="highlight-label">Structure</div>
-        </div>
-        <div class="highlight-item">
-          <div class="highlight-value">5000+ Units</div>
-          <div class="highlight-label">Total Units</div>
-        </div>
+        <p style="text-align: center; margin-top: 15px; font-size: 14px; color: #666;">
+          Club Houses: 2 | Area: 2 Lakh Sq. Ft.
+        </p>
+      </div>
+      
+      <!-- UPDATED PREMIUM LIFESTYLE FEATURES -->
+      <div style="margin: 20px 0; color: #333;">
+        <h3 style="color: #0c2461; margin-bottom: 15px;">Premium Lifestyle Features</h3>
+        <p style="font-size: 16px;">• Every Home is Vaastu Compliant</p>
       </div>
       
       <div class="price-tag">
-        Premium Flats Starting from ₹95L Only
+        Premium 2.5, 3, 3.5 & 4 BHK Starting from 95L only
       </div>
       
       <button class="enquire-btn" onclick="showPopup()">
@@ -1429,7 +1452,7 @@ input, button, textarea, select {
 <section class="about-section" id="about">
   <h2 class="highlight-title">About Prestige Golden Grove</h2>
   <div class="about-content">
-    <p>Prestige Golden Grove is a futuristic luxury residential project in Tellapur, West Hyderabad. Offering 2, 3, 3.5 & 4 BHK modern apartments with sweeping city views, green spaces, and contemporary architecture. Located near Financial District and Outer Ring Road (ORR) with seamless connectivity to Gachibowli, HITEC City, and Kokapet.</p>
+    <p>Prestige Golden Grove is a futuristic luxury residential project in Tellapur, West Hyderabad. Offering 2.5, 3, 3.5 & 4 BHK modern apartments with sweeping city views, green spaces, and contemporary architecture. Located near Financial District and Outer Ring Road (ORR) with seamless connectivity to Gachibowli, HITEC City, and Kokapet.</p>
     <p>The project is designed with world-class amenities, sustainable features, and smart home technologies to provide residents with a premium lifestyle experience in Hyderabad's most promising residential hub.</p>
   </div>
   <button class="brochure-btn" onclick="showBrochureForm()">
@@ -1442,20 +1465,8 @@ input, button, textarea, select {
   <h2 class="highlight-title">Areas & Pricing</h2>
   <div class="price-grid">
     <div class="price-card">
-      <h3>2 BHK</h3>
-      <div class="price-amount">₹ 95 Lakhs*</div>
-      <div class="price-area">1100 - 1300 sq.ft</div>
-      <ul class="price-features">
-        <li>2 Bedrooms with Attached Baths</li>
-        <li>Modular Kitchen</li>
-        <li>Balcony with City View</li>
-        <li>1 Car Parking</li>
-      </ul>
-    </div>
-    
-    <div class="price-card">
       <h3>2.5 BHK</h3>
-      <div class="price-amount">₹ 1.25 Cr*</div>
+      <div class="price-amount">₹ 95 Lakhs*</div>
       <div class="price-area">1350 - 1500 sq.ft</div>
       <ul class="price-features">
         <li>2 Bedrooms + Study Room</li>
@@ -1565,35 +1576,27 @@ input, button, textarea, select {
   <div class="gallery-grid">
     <div class="gallery-item">
       <img src="images/g2.png.png" alt="Exterior Architecture">
-      <div class="gallery-caption">Exterior Architecture</div>
     </div>
     <div class="gallery-item">
       <img src="images/g3.png.png" alt="Clubhouse Entrance">
-      <div class="gallery-caption">Clubhouse Entrance</div>
     </div>
     <div class="gallery-item">
       <img src="images/g4.png.png" alt="Swimming Pool Area">
-      <div class="gallery-caption">Swimming Pool Area</div>
     </div>
     <div class="gallery-item">
       <img src="images/g5.png.png" alt="Landscape Garden">
-      <div class="gallery-caption">Landscape Garden</div>
     </div>
     <div class="gallery-item">
       <img src="images/g6.png.png" alt="Living Room Interior">
-      <div class="gallery-caption">Living Room Interior</div>
     </div>
     <div class="gallery-item">
       <img src="images/g7.png.png" alt="Dining Area">
-      <div class="gallery-caption">Dining Area</div>
     </div>
     <div class="gallery-item">
       <img src="images/g8.png.png" alt="Master Bedroom">
-      <div class="gallery-caption">Master Bedroom</div>
     </div>
     <div class="gallery-item">
       <img src="images/g9.png.png" alt="Modern Kitchen">
-      <div class="gallery-caption">Modern Kitchen</div>
     </div>
   </div>
 </section>
@@ -1611,14 +1614,19 @@ input, button, textarea, select {
       </a>
     </div>
     
+    <!-- MAP LOCATION IMAGE -->
+    <div style="margin: 40px 0; text-align: center;">
+      <img src="images/map.jpeg" alt="Location Map - Prestige Golden Grove" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 2px solid #0c2461;">
+      <p style="margin-top: 15px; color: #666; font-size: 16px;">📍 Kollur / Tellapur, Hyderabad</p>
+    </div>
+    
     <div class="location-advantages">
       <div class="advantage-card">
         <h3>📍 IT Hubs & Business Centers</h3>
         <ul class="advantage-list">
-          <li>Gachibowli <span class="distance">14 km | 25 mins</span></li>
-          <li>HITEC City <span class="distance">20 km | 35 mins</span></li>
-          <li>Financial District <span class="distance">15 km | 30 mins</span></li>
-          <li>Kokapet SEZ <span class="distance">12 km | 25 mins</span></li>
+          <li>ORR Exit 2 <span class="distance">2 km | 5 mins</span></li>
+          <li>Financial District <span class="distance">5 km | 10 mins</span></li>
+          <li>Kokapet <span class="distance">8 km | 15 mins</span></li>
         </ul>
       </div>
       
@@ -1677,7 +1685,7 @@ input, button, textarea, select {
     For immediate assistance: <span style="color: #0c2461;">📞 +91 8332956001</span>
   </p>
   <p style="margin-top: 20px; font-size: 16px;">
-    Prestige Golden Grove, Tellapur, Hyderabad | By Prestige Group
+    Prestige Golden Grove, Kollur / Tellapur, Hyderabad | By Prestige Group
   </p>
 </section>
 
@@ -1990,7 +1998,7 @@ window.addEventListener('scroll', function() {
 // Fix for iOS 100vh issue
 function setViewportHeight() {
   let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  document.documentElement.style.setProperty('--vh', `${vh}px');
 }
 
 setViewportHeight();
